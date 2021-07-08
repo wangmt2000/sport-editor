@@ -23,9 +23,18 @@
 | XIAOMI_AMAZFIT_APP_TOKEN | APP Token (可选)    | xxxxxxxx            |
 | STED_SIZE_RANGE          | 运动步数范围 (可选) | 5000-15000 (默认值) |
 
-- 推荐使用 Node.js 12 及以上的运行/构建当前项目
+- 推荐使用 Node.js 14 及以上的运行/构建当前项目
 - 运动步数范围使用 - 分隔上下限
 - 可选账号/密码、UserID/AppToken 两种方式运行
+
+
+下载小米运动 app
+注册，得到用户名密码
+
+进入app
+选择 第三方接入
+
+
 
 ## Github Actions 部署
 
@@ -37,6 +46,11 @@
 - 执行 sport-editor-task workflow
 
 ## 命令行运行
+
+```
+docker run  -v /home/opc/sport-editor/:/shuabu --rm --name shuabu -w /shuabu --env XIAOMI_AMAZFIT_USERNAME=zhanghao  -e  XIAOMI_AMAZFIT_PASSWORD=123456 -e STED_SIZE_RANGE=15000-30000  node:latest npm start
+
+```
 
 ```
 git clone https://github.com/Devifish/sport-editor.git
