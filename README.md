@@ -31,7 +31,9 @@
 
 - fork 本项目
 - 将环境变量参数填到 Setting -> Secrets (如果使用 Token+ID 方式可不填用户名及密码)
-- 开启 actions (默认`actions`处于禁止状态)
+
+
+- 开启 actions (默认`actions`处于禁止状态).  code----右边----enable workflow
 - 执行 sport-editor-task workflow
 
 ## 命令行运行
